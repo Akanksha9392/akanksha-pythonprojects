@@ -1,0 +1,11 @@
+import mysql.connector as pdc
+connection=pdc.connect(host="localhost",user="root",password="Mysql@a19",database="customer")
+cur=connection.cursor()
+cur.execute("""insert into customer_1(customer_id,customer_name,customer_salary,customer_ph)values(102,'akash',27000,9912444759),(103,'akshitha',23000,9988776655)""")
+#cur.execute("select * from customer_1 where customer_id=5")
+#cur.execute("truncate table customer_1")
+row=cur.fetchone()
+print(row)
+connection.commit()
+cur.close()
+connection.close()
