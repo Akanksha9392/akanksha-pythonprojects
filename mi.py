@@ -236,3 +236,5 @@ for num in range(start,end+1):
 print()
 print("Total perfect numbers:",count)
 
+for x in range(10):
+    print(x)
